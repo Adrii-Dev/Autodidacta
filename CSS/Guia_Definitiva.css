@@ -1,0 +1,161 @@
+/*  <link rel="stylesheet" href="Guia_Definitiva.css"> */
+
+h1{
+background-color: transparent;  /* El fondo del elemento es transparente. */
+background-color: #f4f4f4;      /* Fondo de color gris claro (hex: #f4f4f4). */
+background-color: rgba(255, 0, 0, 0.5); /* Fondo rojo semitransparente, usando rgba. */
+background-image: url('imagen.jpg'); /* Se usa una imagen como fondo. */
+background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Fondo con un degradado de naranja a melocotón. */
+background-repeat: no-repeat;   /* La imagen de fondo no se repite. */
+background-size: cover;         /* La imagen de fondo se ajusta para cubrir todo el elemento. */
+background-size: contain;         /* Ajusta la imagen para que esté contenida dentro del contenedor. */
+background-position: center;    /* Centra la imagen de fondo en el elemento. */
+background-attachment: fixed;   /* La imagen de fondo permanece fija al hacer scroll. */
+background: #333 url('fondo.jpg') no-repeat center; /* Fondo combinado: color oscuro y una imagen centrada sin repetir. */
+
+color: #1f4cca;                 /* Define el color del texto como azul (hex: #1f4cca). */
+color: white;                   /* El color del texto es blanco. */
+color: inherit;                   /* Hereda el color del texto del elemento padre. */
+opacity: 0.75;                  /* El elemento es semi-transparente, con un 75% de opacidad. */
+
+padding: 10px;                  /* Aplica un relleno interno uniforme de 10px. */
+padding: 10px 20px;             /* Relleno de 10px arriba y abajo, 20px a los lados. */
+padding: 10px 15px 20px;          /* Espaciado interno de 10px arriba, 15px laterales, 20px abajo. */
+padding: 5px 10px 15px 20px;      /* Espaciado interno: arriba, derecha, abajo, izquierda. */
+margin: 15px;                   /* Aplica un margen externo uniforme de 15px. */
+margin: 0 auto;                 /* Centra horizontalmente el elemento bloque. */
+margin: 0 10%;                  /* Sin margen vertical, pero 10% del ancho total en los lados. */
+
+font-size: 16px;                /* Tamaño del texto: 16px. */
+font-size: 1.2em;               /* Tamaño relativo al tamaño de fuente del contenedor padre (1.2 veces más grande). */
+/* rem es similar a em, pero es relativa al tamaño de fuente de la raíz (<html>). Esto significa que siempre será relativo al tamaño de fuente global de la página, no al tamaño de fuente del elemento padre. */
+font-style: italic;             /* Aplica un estilo de texto en cursiva. */
+font-family: Arial, sans-serif; /* Usa la fuente Arial; si no está disponible, recurre a una fuente sans-serif. */
+font-weight: bold;              /* Aplica un peso de fuente grueso (negrita). */
+text-align: center;             /* Centra el texto horizontalmente dentro de su contenedor. */
+text-align: right;              /* Alinea el texto a la derecha del contenedor. */
+text-align: justify;            /* Alinea el texto ajustado a ambos lados. */
+text-decoration: underline;     /* Subraya el texto. */
+text-decoration: none;          /* Elimina decoraciones como subrayado o líneas. */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto con opacidad. */
+text-indent: 30px;              /* Indenta la primera línea del texto 30px. */
+line-height: 1.5;               /* Define el interlineado, 1.5 veces el tamaño de la fuente. */
+letter-spacing: 2px;            /* Aumenta el espacio entre caracteres en 2px. */
+text-transform: uppercase;      /* Convierte el texto a mayúsculas. */
+word-spacing: 5px;              /* Aumenta el espacio entre palabras en 5px. */
+
+border: 1px solid #000;         /* Aplica un borde sólido de 1px de color negro. */
+border: none;                   /* Elimina cualquier borde aplicado al elemento. */
+border-radius: 8px;             /* Hace las esquinas redondeadas con un radio de 8px. */
+border-radius: 10px 0;          /* Esquinas redondeadas solo en la parte superior izquierda y derecha. */
+border-image: url('borde.png') 30 round; /* Usa una imagen como borde con ajuste redondeado. */
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra con una ligera transparencia. */
+box-shadow: inset 0 0 10px #000; /* Agrega una sombra interna al elemento. */
+
+width: 100%;                    /* El ancho ocupa todo el espacio del contenedor padre. */
+width: 50vw;                    /* Ocupa el 50% del ancho de la ventana del navegador. */
+height: 20vh;                   /* Ocupa el 20% de la altura de la ventana del navegador. */
+height: auto;                   /* La altura se ajusta automáticamente según el contenido. */
+max-width: 1200px;              /* Define un ancho máximo de 1200px. */
+min-height: 300px;              /* Establece una altura mínima de 300px. */
+
+position: fixed;                /* El elemento permanece fijo en su posición al hacer scroll. */
+position: relative;             /* El elemento se posiciona relativo a su posición original. */
+position: absolute;             /* Se posiciona en relación a su contenedor más cercano con posición relativa. */
+top: 50px;                      /* Mueve el elemento 50px hacia abajo desde su posición actual. */
+left: 20px;                     /* Mueve el elemento 20px hacia la derecha. */
+z-index: 10;                    /* Superpone el elemento con una prioridad mayor sobre otros. */
+
+display: block;                 /* El elemento se comporta como un bloque: ocupa toda la línea. Ej.: <div>. */
+display: inline;                /* El elemento se comporta como un elemento en línea: no rompe la línea. Ej.: <span>. */
+display: inline-block;          /* Combina características de `inline` y `block`. Ocupa solo el contenido, pero permite establecer dimensiones. */
+display: none;                  /* El elemento no se muestra y no ocupa espacio en la página. */
+display: flex;                  /* Aplica un contenedor flexible. */
+
+flex-direction: row;            /* Organiza los elementos hijos en fila (por defecto). */
+flex-direction: column;         /* Organiza los elementos hijos en columna. */
+justify-content: center;        /* Centra horizontalmente los elementos hijos. */
+justify-content: space-between; /* Distribuye los elementos con espacio igual entre ellos. */
+align-self: center;             /* Centra verticalmente un elemento en su contenedor. */
+align-items: center;            /* Centra verticalmente los elementos hijos. */
+flex-direction: column;         /* Los elementos hijos se organizan en columna. */
+
+cursor: pointer;                /* Cambia el cursor a una mano cuando se pasa sobre el elemento. */
+cursor: default;                /* Usa el cursor predeterminado del navegador. */
+cursor: pointer;                /* Cambia el cursor a una mano cuando pasa sobre el elemento. */
+cursor: not-allowed;            /* Indica que la interacción no está permitida. */
+cursor: crosshair;              /* Cambia el cursor a un retículo (ideal para herramientas gráficas). */
+pointer-events: none;           /* Desactiva la interacción del mouse con el elemento. */
+transition: all 0.3s ease;      /* Crea una transición suave de 0.3 segundos para todos los cambios de estilo. */
+
+overflow: visible;              /* El contenido que se desborda es visible (valor por defecto). */
+overflow: hidden;               /* El contenido que se desborda se corta y no es visible. */
+overflow: scroll;                /* Siempre muestra barras de desplazamiento, incluso si no son necesarias. */
+overflow: auto;                 /* Muestra barras de desplazamiento solo si el contenido desborda. */
+overflow-x: hidden;             /* Oculta el contenido que desborda horizontalmente. */
+overflow-x: auto;               /* Muestra barra de desplazamiento horizontal si es necesario. */
+overflow-y: scroll;             /* Activa una barra de desplazamiento vertical siempre. */
+overflow-y: visible;            /* Permite que el contenido desborde verticalmente y sea visible. */
+
+box-sizing: content-box;        /* Solo incluye el contenido en el ancho/alto; padding y borde se suman fuera. */
+box-sizing: border-box;         /* Incluye padding y bordes en el ancho/alto especificado. */
+}
+
+.link:hover{
+    outline: 3px solid yellow;
+    /* el borde afecta al contenido y el contorno es algo que se esta dibujando encima */
+}
+.link:active{/* cuando clickas sobre el elemento, cuando lo activas */
+    color: blue;
+    border: 3px solid #3cd02d; /* atajo para border-withd, border-style y border-color */
+}
+/*  :focus Se aplica cuando un elemento, como un campo de formulario o un enlace, recibe el foco, es decir, cuando el usuario hace clic en él o navega hasta él con el teclado.*/
+.child{
+    border: inherit;/* initial para evitar que herede del padre, unset, revert */
+}
+img{
+    mix-blend-mode: multiply;/* quitar el fondo en una imagen */
+}
+body{
+    background-color: white;
+}
+/* boton con transicion a otro fondo */
+.boton {
+    background-color: transparent;  /* El fondo del botón es transparente inicialmente. */
+    color: #1f4cca;                 /* El color del texto es un azul (hex: #1f4cca). */
+    padding: 15px 32px;             /* El botón tiene un relleno interno (padding) de 15px arriba y abajo, y 32px a los lados. */
+    font-size: 16px;                /* El tamaño de la fuente (texto) dentro del botón es de 16px. */
+    border: 2px solid #1f4cca;     /* El borde del botón es de 2px de grosor, de color azul (#1f4cca). */
+    border-radius: 16px;           /* Los bordes del botón son redondeados con un radio de 16px. */
+    cursor: pointer;               /* Cuando el usuario pasa el mouse sobre el botón, el cursor cambia a una mano, indicando que es interactivo. */
+    transition: 0.4s;               /* Se define una transición suave para cualquier cambio de estilo, con una duración de 0.4 segundos. */
+}
+.boton:hover{
+    background-color: #1f4cca;
+    color: white;
+}
+/* transicion animada de varios contenedores */
+.container{
+    margin-top: 15rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-column-gap: 15px;
+}
+.card{
+    background: #1f4cca;
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.4) 10px 7px 29px 0px;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover{
+    transform: translateY(-15px);
+}
+.container:hover > :not(:hover){
+    opacity: 0.5;
+    background: #333;
+}
