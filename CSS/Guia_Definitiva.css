@@ -72,13 +72,23 @@ display: inline-block;          /* Combina características de `inline` y `block
 display: none;                  /* El elemento no se muestra y no ocupa espacio en la página. */
 display: flex;                  /* Aplica un contenedor flexible. */
 
-flex-direction: row;            /* Organiza los elementos hijos en fila (por defecto). */
-flex-direction: column;         /* Organiza los elementos hijos en columna. */
 justify-content: center;        /* Centra horizontalmente los elementos hijos. */
 justify-content: space-between; /* Distribuye los elementos con espacio igual entre ellos. */
-align-self: center;             /* Centra verticalmente un elemento en su contenedor. */
+justify-content: space-around;
+justify-content: space-evenly;
+justify-content: flex-start;
+justify-content: flex-end; 
 align-items: center;            /* Centra verticalmente los elementos hijos. */
-flex-direction: column;         /* Los elementos hijos se organizan en columna. */
+align-items: stretch;
+align-items: flex-start;
+align-items: flex-end;
+align-self: center;             /* Centra verticalmente un elemento en su contenedor. */
+flex-direction: row;/*row-reverse*/         /* Organiza los elementos hijos en fila (por defecto). */
+flex-direction: column;/*column-reverse*/        /* Organiza los elementos hijos en columna. */
+flex-wrap: wrap;
+flex-wrap: nowrap;
+flex-wrap:wrap-reverse;
+flex-flow: row wrap;
 
 cursor: pointer;                /* Cambia el cursor a una mano cuando se pasa sobre el elemento. */
 cursor: default;                /* Usa el cursor predeterminado del navegador. */
