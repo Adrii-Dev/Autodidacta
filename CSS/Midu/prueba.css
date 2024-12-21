@@ -1,0 +1,55 @@
+/*
+body{
+    background: #09f;
+}
+.parent{
+    border: 5px solid black;
+    width: 250px;
+    height: 500px;
+    box-sizing: border-box;
+    position: relative;
+    background: red;
+}
+.container{
+    background: white;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    z-index: 2;
+}
+*/
+/* https://web.dev/learn/css/z-index?hl=es-419 */
+/* https://developer.mozilla.org/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context */
+/* .demo>* selecciona todos los elementos hijos directos de un contenedor con la clase demo. */
+.demo>* {
+    width: 250px;
+    height: 200px;
+}
+/* .demo>*+* selecciona todo hijo directo de .demo que tenga un hermano previo inmediato (es decir, aplica a todos los hijos excepto el primero). */
+.demo>*+* {
+    /* margin-top: -150px; solapa los elementos, desplazándolos hacia arriba 150px sobre el elemento anterior. */
+    margin-top: -150px;
+    /* opacity: 0.8; establece la opacidad de los elementos en un 80% */
+    opacity: 0.8;
+    /* box-shadow: 0 -1px 10px rgba(0 0 0 / 60%); agrega una sombra de caja:
+        0: Sin desplazamiento horizontal.
+        -1px: Desplaza la sombra 1px hacia arriba.
+        10px: Desenfoque de la sombra.
+        rgba(0 0 0 / 60%): Color negro con 60% de opacidad. */
+    box-shadow: 0 -1px 10px rgba(0 0 0 / 60%);
+}
+/* .demo> :first-child selecciona el primer hijo directo de .demo. */
+.demo> :first-child {
+    background: aliceblue;
+    border: 2px solid lightblue;
+}
+/* .demo> :nth-child(2) selecciona el segundo hijo directo de .demo */
+.demo> :nth-child(2) {
+    background: pink;
+    border: 2px solid hotpink;
+}
+/* .demo> :last-child selecciona el último hijo directo de .demo */
+.demo> :last-child {
+    background: wheat;
+    border: 2px solid gold;
+}

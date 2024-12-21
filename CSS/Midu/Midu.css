@@ -1,0 +1,85 @@
+/* CSS para racticar los ejemplos del curso de Midudev de CSS */
+/* https://www.youtube.com/watch?v=TlJbu0BMLaY */
+body{
+    background: #09f;
+    margin: 0;
+}
+/*--------------------------------------- 1 ---------------------------------------------*/
+/* el desbordamiento esta por defecto en overflow: visible(no se recorta y el contenido puede salirse de la caja) */
+/* overflow: hidden (el contenido no sale de la caja pero se queda oculto)*/
+/* overflow: scroll (te pone barras para poder hacer scroll)*/
+/* overflow: auto (como si fuese el scroll pero te lo pone diferente segun el dispositivo, es mas recomendable por que si el contenido no sobresale no te pone las barras)*/
+/* con el hidden, si incluimos text-overflow: ellipsis ademas de recortar le pone los 3 puntos(...)*/
+.container1{
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 40px;
+    overflow: auto;
+}
+/*--------------------------------------- 2 ---------------------------------------------*/
+/* por defecto estan en position: static, que se quedan directamente donde los pongas*/
+/* position: absolute junto a top: right: bottom: left: se utiliza para marcarle las coordenadas donde lo quieres poner respecto al html entero, no solo en su caja*/
+/* position: relative en el elemento padre para que sea un punto de referencia a los position: absolute de los hijos*/
+.container2{
+    border: 5px solid #ccc;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    position: relative;
+}
+.container22{
+    background: white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* Para poder centrar div se puede utilizar: 
+{
+top: 0;
+rigth: 0;
+left: 0;
+bottom: 0;
+margin: auto;
+}
+pero con el inset: 0; es una abreviatura de top left bottom rigth*/
+/*--------------------------------------- 3 ---------------------------------------------*/
+/* con el position: fixed se ajusta en las coordenadas de la pantalla, no del html ni del padre*/
+/* por eso hay que quitar el position: relative, por que no se compenetran*/
+/* son 3 div, pero con el fixed se solapan todos en un mismo sitio. Se utiliza por ejemplo en las paginas con un chat de ayuda*/
+.container3{
+    border: 5px solid #ccc;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+}
+.container33{
+    background: white;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/*--------------------------------------- 4 ---------------------------------------------*/
+/* utiliza el position: relative de su padre por defecto, y no se va de la pantalla haciendo scroll de donde este pero nunca sale de su contenedor padre*/
+.container4{
+    border: 5px solid #ccc;
+    width: 250px;
+    height: 500px;
+    box-sizing: border-box;
+}
+.container44{
+    background: white;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+/*--------------------------------------- 5 ---------------------------------------------*/
+/*-- Pruebas con las capas, ver el ejemplo en prueba.html y prueba.css */
