@@ -24,6 +24,7 @@ body{
 .demo>* {
     width: 250px;
     height: 200px;
+    /* para cambiar los z-index, necesitamos tener en todos el position: relative; y asignarles a cada uno el z-index que queramos */
 }
 /* .demo>*+* selecciona todo hijo directo de .demo que tenga un hermano previo inmediato (es decir, aplica a todos los hijos excepto el primero). */
 .demo>*+* {
@@ -42,11 +43,13 @@ body{
 .demo> :first-child {
     background: aliceblue;
     border: 2px solid lightblue;
+    z-index: 99;
 }
 /* .demo> :nth-child(2) selecciona el segundo hijo directo de .demo */
 .demo> :nth-child(2) {
     background: pink;
     border: 2px solid hotpink;
+    z-index: 999;
 }
 /* .demo> :last-child selecciona el último hijo directo de .demo */
 .demo> :last-child {

@@ -1,0 +1,123 @@
+/* CSS para racticar los ejemplos del curso de Midudev de CSS de la parte de Flex */
+/* https://www.youtube.com/watch?v=TlJbu0BMLaY */
+/*--------------------------------------- 1 ---------------------------------------------*/
+/* por defecto, los div tienen el display: block, que hace que los elementos tengan un salto de linea*/
+.parent{
+    display: block;
+}
+.item{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+}
+.item:first-child{
+    background: yellow;
+}
+.item:last-child{
+    background: red;
+}
+/*--------------------------------------- 2 ---------------------------------------------*/
+/* con el display: inline los elementos se comportan como si fueran texto*/
+/* tanto el ancho como el alto no le afectan*/
+/* no habria que ponerle en el contenedor, hay que ponerlo en los hijos*/
+.item1{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+    display: inline;
+}
+.item1:first-child{
+    background: yellow;
+}
+.item1:last-child{
+    background: red;
+}
+/*--------------------------------------- 3 ---------------------------------------------*/
+/* con el display: flex si hay que ponerlo en el elemento contenedor, establece como tiene que funcionar el contenedor respecto a sus hijos*/
+/* flex trabaja solo en un solo eje, o trabaja en filas o en columnas */
+.parent3{
+    display: flex;
+    /* por defecto la direccion de las filas es flex-direction: row; y se ponen en la misma linea, existe el row-reverse*/
+}
+.item3{
+    display: flex;
+    flex-direction: row;
+}
+.item33{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+}
+.item33:first-child{
+    background: yellow;
+}
+.item33:last-child{
+    background: red;
+}
+.item3-1{
+    display: flex;
+    /* con flex-direction: column se apilan y la diferencia con el display: block es que no ocupan el espacio que tienen al lado*/
+    flex-direction:column;
+    margin-right: 5px;
+}
+.item33-1{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+}
+.item33-1:first-child{
+    background: yellow;
+}
+.item33-1:last-child{
+    background: red;
+}
+/*--------------------------------------- 4 ---------------------------------------------*/
+/* añadirle a flex-direction: flex el direction para asignarle aun mas cambios de posicion */
+.parent4{
+    display: flex;
+}
+.item4-1{
+    display: flex;
+    flex-direction: flex;
+    direction: rtl; /* rigth to left, lee de derecha a izquierda*/
+    margin-right: 5px;
+}
+.item44-1{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+}
+.item44-1:first-child{
+    background: yellow;
+}
+.item44-1:last-child{
+    background: red;
+}
+.item4{
+    display: flex;
+    flex-direction: flex;
+    writing-mode: vertical-lr; /* no te lo despliega apilado en columnas, simplemente lo lee de arriba hacia abajo*/
+}
+.item44{
+    border: 1px solid;
+    opacity: .9;
+    width: 100px;
+    height: 100px;
+    background: #09f;
+}
+.item44:first-child{
+    background: yellow;
+}
+.item44:last-child{
+    background: red;
+}
