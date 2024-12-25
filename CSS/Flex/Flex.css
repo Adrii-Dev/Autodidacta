@@ -121,3 +121,77 @@
 .item44:last-child{
     background: red;
 }
+/*--------------------------------------- 5 ---------------------------------------------*/
+/* por defecto, flex-wrap es nowrap*/
+/* los hijos tienen una anchura de 100px cada uno, pero con el flex-wrap: nowrap le oglogamos a que se junto todo en una misma linea*/
+.parent5{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* con flex-wrap: wrap no te lo ajusta y te haria salto de lineas si no tienen espacio*/
+    border: 4px solid black;
+    width: 200px;/* podemos forzar la anchura poniendole al padre un maximo de anchura*/
+}
+/* con flex-flow: row nowrap es una abreviatura para el flex-direction y el flex-wrap*/
+/*--------------------------------------- 6 ---------------------------------------------*/
+/* --Valores por defecto--*/
+/*  flex-grow: 0; propiedad para que los elementos crezca, por defecto esta en 0 por lo tanto los elementos NO crecen
+    flex-shrink: 1; por defecto es 1 para que PUEDAN reducir su tamaño como en el apartado 5
+    flex-basis: auto; por defecto el auto que seria el tamaño que le hemos puesto en el width */
+/* se ponen en los elementos hijos */
+/* importante, solo afecta que puiedan crecer o reducirse en el eje que estan trabajando flex, en este caso la anchura*/
+.parent6{
+    display: flex;
+    flex-flow: row nowrap;
+    border: 4px solid black;
+    width: 200px;
+    box-sizing: border-box;
+}
+.item6{
+    border: 1px solid;
+    opacity: .9;
+    height: 200px;
+    background: #09f;
+
+    flex-grow: 1;/* que PUEDAN crecer*/
+    flex-shrink: 1;/* que PUEDAN reducrise */
+    flex-basis: auto;/* si le pones 0 el tamaño es el mismo para cada uno, con el auto respeta su contenido, por eso el contenedor amarillo es mas grande, por que su contenido es mas grande*/
+    /* por esto, sin ponerle anchura a los hijos se ajusta a la anchura del padre*/
+    /* la forma abreviada para flew-grow: 1, flex-shrink: 1 y flex-basis: 0 seria flex: 1 */
+}
+.item6:first-child{
+    background: yellow;
+}
+.item6:last-child{
+    background: red;
+    flex:5;/* la abreviatura tambien sirva para indicar cuanto tiene que ser mas grande con respecto a los otros, en este caso es 5 veces mas grande que los otros menos que el amarillo que tiene sus propios atributos */
+}
+/*--------------------------------------- 7 ---------------------------------------------*/
+.parent7{
+    display: flex;
+    flex-direction: row; /* <-- eje principal, en este caso horizontal */
+    border: 4px solid black;
+    width: 250px;
+    height: 400px;
+    box-sizing: border-box;
+    justify-content: center;/* lo centra en su eje principal, osea en el horizontal */
+    /* justify-content: space-around(deja espacio alrededor de sus elementos),justify-content: space-evenly(deja el MISMO espacio alrededor de sus elementos) justify-content: space-between(deja espacio entre sus elementos, pero no alrededor),justify-content: flex-end, justify-content: flex-start(por defecto) */
+    /* gap: 15px para forzar espacio entre elementos*/
+    align-items: center;/* centra los elementos en el eje cruzado, en este caso vertical*/
+}
+.item7{
+    border: 1px solid;
+    opacity: .9;
+    width: 50px;
+    height: 50px;
+    background: #09f;
+}
+.item7:first-child{
+    background: yellow;
+}
+.item7:nth-child(2){
+    background: purple;
+    align-self: flex-end; /* para alinear solamente uno de los elementos. stretch, flex-start, flex-end, center*/
+}
+.item7:last-child{
+    background: red;
+}
