@@ -116,6 +116,10 @@ overflow-y: visible;            /* Permite que el contenido desborde verticalmen
 
 box-sizing: content-box;        /* Solo incluye el contenido en el ancho/alto; padding y borde se suman fuera. */
 box-sizing: border-box;         /* Incluye padding y bordes en el ancho/alto especificado. */
+/* Para que el footer se quede fijado abajo en todas las resoluciones*/
+position: absolute;
+bottom: 0;
+width: 100%;
 }
 
 .link:hover{
